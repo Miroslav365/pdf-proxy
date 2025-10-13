@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/preview.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/preview", "dest": "api/preview.js" }
+  ]
+}
