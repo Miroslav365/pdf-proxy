@@ -5,5 +5,20 @@
   ],
   "routes": [
     { "src": "/api/preview", "dest": "pages/api/preview.js" }
+  ],
+  "headers": [
+    {
+      "source": "/api/preview",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Access-Control-Allow-Origin", "value": "https://app.time-tracker-pro.com" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; frame-ancestors 'self' https://app.time-tracker-pro.com https://*.time-tracker-pro.com"
+        }
+      ]
+    }
   ]
 }
